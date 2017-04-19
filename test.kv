@@ -1,0 +1,474 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+<ScreenManager>:
+    transition: FadeTransition()
+    Menu:
+    Credits:
+    SoundBoard:
+    Recorder:
+
+
+
+<Menu>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'fond_edm.jpeg'
+    FloatLayout:
+        Button:
+            background_color: 1,1,1,0.5
+            background_normal: 'boutongo.jpg'
+            size_hint: 0.8, 0.3
+            pos_hint: {'center_x':0.5, 'center_y': 0.68}
+            on_press: root.manager.current = 'soundboard'
+
+        Button:
+            background_color: 1,1,1,0.5
+            background_normal: 'boutoncredits2.jpg'
+            pos_hint: {'center_x':0.5, 'center_y': 0.32}
+            size_hint: 0.8, 0.3
+            on_press: root.manager.current = 'credits'
+
+<Credits>:
+    Label:
+        text: "ABDALLAH-KHODJA Rayene Sami"
+    Button:
+        background_normal: 'back arrow.png'
+        on_press: root.manager.current = 'menu'
+        size_hint: 0.15, 0.15
+        pos_hint: {'x': 0, 'top': 1}
+
+<SoundBoard>:
+    Video:
+        source: 'videodemusic.mp4'
+        play: True
+        options: {'eos' : 'loop'}
+    Button:
+        size_hint: None,None
+        size: 102, 97
+        pos_hint: {'y': 0.85, 'x': 0}
+        background_normal: 'home.jpg'
+        on_press: root.manager.current = 'menu'
+
+
+    ScrollView:
+        bar_color: 0.7,0.2,0.1,1
+        bar_width: 5
+        size_hint: (None, None)
+        size: (1250, 800)
+        pos_hint: {'center_x': .5, 'center_y': .3}
+
+        GridLayout:
+            size_hint: (None, None)
+            width: 1250
+            height: 850
+            spacing: 23
+            padding: 23
+            cols: 18
+            rows: 8
+            col_force_default: True
+            row_force_default: True
+            row_default_height: 50
+            col_default_width: 45
+            ToggleButton:
+                background_normal: 'loopup.png'
+                background_down: 'loopdown.jpg'
+                group: 'loop'
+                on_state:
+                    if self.state == 'down': app.son()
+                    else: app.stopson()
+            ToggleButton:
+                group: 'loop'
+                background_normal: 'loopup.png'
+                background_down: 'loopdown.jpg'
+                on_state:
+                    if self.state == 'down': app.son1()
+                    else: app.stopson1()
+            ToggleButton:
+                group: 'loop'
+                background_normal: 'loopup.png'
+                background_down: 'loopdown.jpg'
+                on_state:
+                    if self.state == 'down': app.son2()
+                    else: app.stopson2()
+            ToggleButton:
+                group: 'loop'
+                background_normal: 'loopup.png'
+                background_down: 'loopdown.jpg'
+                on_state:
+                    if self.state == 'down': app.son3()
+                    else: app.stopson3()
+            ToggleButton:
+                group: 'loop'
+                background_normal: 'loopup.png'
+                background_down: 'loopdown.jpg'
+                on_state:
+                    if self.state == 'down': app.son4()
+                    else: app.stopson4()
+            ToggleButton:
+                group: 'loop'
+                background_normal: 'loopup.png'
+                background_down: 'loopdown.jpg'
+                on_state:
+                    if self.state == 'down': app.son5()
+                    else: app.stopson5()
+            ToggleButton:
+                group: 'loop'
+                background_normal: 'loopup.png'
+                background_down: 'loopdown.jpg'
+                on_state:
+                    if self.state == 'down': app.son6()
+                    else: app.stopson6()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son16()
+                    else: app.stopson16()
+
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son7()
+                    else: app.stopson7()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son8()
+                    else: app.stopson8()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son9()
+                    else: app.stopson9()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son10()
+                    else: app.stopson10()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son11()
+                    else: app.stopson11()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son12()
+                    else: app.stopson12()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son13()
+                    else: app.stopson13()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son14()
+                    else: app.stopson14()
+            ToggleButton:
+                group: "toms"
+                background_normal: 'tomsup.png'
+                background_down: 'tomsdown.png'
+                on_state:
+                    if self.state == 'down': app.son15()
+                    else: app.stopson15()
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                group: 'drums'
+                on_state:
+                    if self.state == 'down': app.son()
+                    else: app.stopson()
+            ToggleButton:
+                on_state:
+                    if self.state == 'down': app.son1()
+                    else: app.stopson1()
+            ToggleButton:
+                group: 'drums'
+                on_state:
+                    if self.state == 'down': app.son2()
+                    else: app.stopson2()
+            ToggleButton:
+                group: 'guitare'
+                on_state:
+                    if self.state == 'down': app.son3()
+                    else: app.stopson3()
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                group: 'drums'
+                on_state:
+                    if self.state == 'down': app.son()
+                    else: app.stopson()
+            ToggleButton:
+                on_state:
+                    if self.state == 'down': app.son1()
+                    else: app.stopson1()
+            ToggleButton:
+                group: 'drums'
+                on_state:
+                    if self.state == 'down': app.son2()
+                    else: app.stopson2()
+            ToggleButton:
+                group: 'guitare'
+                on_state:
+                    if self.state == 'down': app.son3()
+                    else: app.stopson3()
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            ToggleButton:
+                text: "1"
+            Button:
+                id: start_button
+                text: 'Start Recording'
+                on_press: root.manager.current = 'recorder'
+
+            Button:
+                id: stop_button
+                text: 'Stop Recording'
+
